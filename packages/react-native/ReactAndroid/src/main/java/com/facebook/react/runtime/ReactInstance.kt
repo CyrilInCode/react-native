@@ -76,6 +76,7 @@ import java.util.HashMap
 import java.util.HashSet
 import kotlin.collections.Collection
 import kotlin.jvm.JvmStatic
+import com.facebook.react.util.RNLog
 
 /**
  * A replacement for [com.facebook.react.bridge.CatalystInstance] responsible for creating and
