@@ -81,6 +81,16 @@ const definitions: FeatureFlagDefinitions = {
       },
       ossReleaseStage: 'none',
     },
+    cxxNativeAnimatedRemoveJsSync: {
+      defaultValue: false,
+      metadata: {
+        dateAdded: '2025-06-16',
+        description: 'Removes JS sync at end of native animation',
+        expectedReleaseValue: true,
+        purpose: 'experimentation',
+      },
+      ossReleaseStage: 'none',
+    },
     disableMainQueueSyncDispatchIOS: {
       defaultValue: false,
       metadata: {
@@ -254,17 +264,6 @@ const definitions: FeatureFlagDefinitions = {
       metadata: {
         dateAdded: '2024-08-30',
         description: 'iOS Views will clip to their padding box vs border box',
-        expectedReleaseValue: true,
-        purpose: 'experimentation',
-      },
-      ossReleaseStage: 'none',
-    },
-    enableIntersectionObserverEventLoopIntegration: {
-      defaultValue: true,
-      metadata: {
-        dateAdded: '2025-04-16',
-        description:
-          'Integrates IntersectionObserver in the Event Loop in the new architecture, to dispatch the initial notifications for observations in the "Update the rendering" step.',
         expectedReleaseValue: true,
         purpose: 'experimentation',
       },

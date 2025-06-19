@@ -34,6 +34,7 @@ const inputFilesPostTransforms: $ReadOnlyArray<PluginObj<mixed>> = [
 ];
 
 const postTransforms: $ReadOnlyArray<PluginObj<mixed>> = [
+  require('./transforms/stripUnstableApis'),
   require('./transforms/sortTypeDefinitions'),
   require('./transforms/sortProperties'),
   require('./transforms/sortUnions'),
@@ -211,6 +212,8 @@ async function getCleanedUpRollup(tempDirectory: string) {
 
   const formattedRollup = prettier.format(transformedRollup, {
     parser: 'typescript',
+    semi: false,
+    trailingComma: 'all',
   });
 
   return formattedRollup;

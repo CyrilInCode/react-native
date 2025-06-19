@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<76edde93369be682e837189f82871dfe>>
+ * @generated SignedSource<<de8775978e15479830fb215c6f15b144>>
  */
 
 /**
@@ -28,6 +28,8 @@ public open class ReactNativeFeatureFlagsDefaults : ReactNativeFeatureFlagsProvi
   override fun animatedShouldSignalBatch(): Boolean = false
 
   override fun cxxNativeAnimatedEnabled(): Boolean = false
+
+  override fun cxxNativeAnimatedRemoveJsSync(): Boolean = false
 
   override fun disableMainQueueSyncDispatchIOS(): Boolean = false
 
@@ -62,8 +64,6 @@ public open class ReactNativeFeatureFlagsDefaults : ReactNativeFeatureFlagsProvi
   override fun enableIOSTextBaselineOffsetPerLine(): Boolean = false
 
   override fun enableIOSViewClipToPaddingBox(): Boolean = false
-
-  override fun enableIntersectionObserverEventLoopIntegration(): Boolean = true
 
   override fun enableLayoutAnimationsOnAndroid(): Boolean = false
 

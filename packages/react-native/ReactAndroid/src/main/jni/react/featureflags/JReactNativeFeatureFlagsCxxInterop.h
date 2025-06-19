@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<04986fa84ec60aa0816ee79ab68e56aa>>
+ * @generated SignedSource<<30859b9c649e432263ff53fa04890837>>
  */
 
 /**
@@ -37,6 +37,9 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool cxxNativeAnimatedEnabled(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
+
+  static bool cxxNativeAnimatedRemoveJsSync(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool disableMainQueueSyncDispatchIOS(
@@ -88,9 +91,6 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool enableIOSViewClipToPaddingBox(
-    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
-
-  static bool enableIntersectionObserverEventLoopIntegration(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool enableLayoutAnimationsOnAndroid(

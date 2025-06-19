@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<bb0b241f561c9c443d6453fa259d0a5d>>
+ * @generated SignedSource<<b8d441d64e8e04ebbfe611edb4a96b97>>
  */
 
 /**
@@ -54,6 +54,12 @@ class ReactNativeFeatureFlagsJavaProvider
   bool cxxNativeAnimatedEnabled() override {
     static const auto method =
         getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("cxxNativeAnimatedEnabled");
+    return method(javaProvider_);
+  }
+
+  bool cxxNativeAnimatedRemoveJsSync() override {
+    static const auto method =
+        getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("cxxNativeAnimatedRemoveJsSync");
     return method(javaProvider_);
   }
 
@@ -156,12 +162,6 @@ class ReactNativeFeatureFlagsJavaProvider
   bool enableIOSViewClipToPaddingBox() override {
     static const auto method =
         getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("enableIOSViewClipToPaddingBox");
-    return method(javaProvider_);
-  }
-
-  bool enableIntersectionObserverEventLoopIntegration() override {
-    static const auto method =
-        getReactNativeFeatureFlagsProviderJavaClass()->getMethod<jboolean()>("enableIntersectionObserverEventLoopIntegration");
     return method(javaProvider_);
   }
 
@@ -370,6 +370,11 @@ bool JReactNativeFeatureFlagsCxxInterop::cxxNativeAnimatedEnabled(
   return ReactNativeFeatureFlags::cxxNativeAnimatedEnabled();
 }
 
+bool JReactNativeFeatureFlagsCxxInterop::cxxNativeAnimatedRemoveJsSync(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
+  return ReactNativeFeatureFlags::cxxNativeAnimatedRemoveJsSync();
+}
+
 bool JReactNativeFeatureFlagsCxxInterop::disableMainQueueSyncDispatchIOS(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
   return ReactNativeFeatureFlags::disableMainQueueSyncDispatchIOS();
@@ -453,11 +458,6 @@ bool JReactNativeFeatureFlagsCxxInterop::enableIOSTextBaselineOffsetPerLine(
 bool JReactNativeFeatureFlagsCxxInterop::enableIOSViewClipToPaddingBox(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
   return ReactNativeFeatureFlags::enableIOSViewClipToPaddingBox();
-}
-
-bool JReactNativeFeatureFlagsCxxInterop::enableIntersectionObserverEventLoopIntegration(
-    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop> /*unused*/) {
-  return ReactNativeFeatureFlags::enableIntersectionObserverEventLoopIntegration();
 }
 
 bool JReactNativeFeatureFlagsCxxInterop::enableLayoutAnimationsOnAndroid(
@@ -656,6 +656,9 @@ void JReactNativeFeatureFlagsCxxInterop::registerNatives() {
         "cxxNativeAnimatedEnabled",
         JReactNativeFeatureFlagsCxxInterop::cxxNativeAnimatedEnabled),
       makeNativeMethod(
+        "cxxNativeAnimatedRemoveJsSync",
+        JReactNativeFeatureFlagsCxxInterop::cxxNativeAnimatedRemoveJsSync),
+      makeNativeMethod(
         "disableMainQueueSyncDispatchIOS",
         JReactNativeFeatureFlagsCxxInterop::disableMainQueueSyncDispatchIOS),
       makeNativeMethod(
@@ -706,9 +709,6 @@ void JReactNativeFeatureFlagsCxxInterop::registerNatives() {
       makeNativeMethod(
         "enableIOSViewClipToPaddingBox",
         JReactNativeFeatureFlagsCxxInterop::enableIOSViewClipToPaddingBox),
-      makeNativeMethod(
-        "enableIntersectionObserverEventLoopIntegration",
-        JReactNativeFeatureFlagsCxxInterop::enableIntersectionObserverEventLoopIntegration),
       makeNativeMethod(
         "enableLayoutAnimationsOnAndroid",
         JReactNativeFeatureFlagsCxxInterop::enableLayoutAnimationsOnAndroid),

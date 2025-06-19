@@ -5,16 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import <react/runtime/JSRuntimeFactoryCAPI.h>
+package com.facebook.react.views.virtualview
 
-#pragma once
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-JSRuntimeFactoryRef jsrt_create_jsc_factory(void);
-
-#ifdef __cplusplus
+internal enum class VirtualViewMode(val value: Int) {
+  Visible(0),
+  Prerender(1),
+  Hidden(2),
 }
-#endif

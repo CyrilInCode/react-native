@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<8cb9eb082005be480c39272ffc7dde03>>
+ * @generated SignedSource<<c46464d2d10ac0c8a6b7869ae5b3cd2b>>
  */
 
 /**
@@ -23,6 +23,7 @@ internal class ReactNativeFeatureFlagsCxxAccessor : ReactNativeFeatureFlagsAcces
   private var commonTestFlagCache: Boolean? = null
   private var animatedShouldSignalBatchCache: Boolean? = null
   private var cxxNativeAnimatedEnabledCache: Boolean? = null
+  private var cxxNativeAnimatedRemoveJsSyncCache: Boolean? = null
   private var disableMainQueueSyncDispatchIOSCache: Boolean? = null
   private var disableMountItemReorderingAndroidCache: Boolean? = null
   private var disableTextLayoutManagerCacheAndroidCache: Boolean? = null
@@ -40,7 +41,6 @@ internal class ReactNativeFeatureFlagsCxxAccessor : ReactNativeFeatureFlagsAcces
   private var enableFontScaleChangesUpdatingLayoutCache: Boolean? = null
   private var enableIOSTextBaselineOffsetPerLineCache: Boolean? = null
   private var enableIOSViewClipToPaddingBoxCache: Boolean? = null
-  private var enableIntersectionObserverEventLoopIntegrationCache: Boolean? = null
   private var enableLayoutAnimationsOnAndroidCache: Boolean? = null
   private var enableLayoutAnimationsOnIOSCache: Boolean? = null
   private var enableMainQueueCoordinatorOnIOSCache: Boolean? = null
@@ -96,6 +96,15 @@ internal class ReactNativeFeatureFlagsCxxAccessor : ReactNativeFeatureFlagsAcces
     if (cached == null) {
       cached = ReactNativeFeatureFlagsCxxInterop.cxxNativeAnimatedEnabled()
       cxxNativeAnimatedEnabledCache = cached
+    }
+    return cached
+  }
+
+  override fun cxxNativeAnimatedRemoveJsSync(): Boolean {
+    var cached = cxxNativeAnimatedRemoveJsSyncCache
+    if (cached == null) {
+      cached = ReactNativeFeatureFlagsCxxInterop.cxxNativeAnimatedRemoveJsSync()
+      cxxNativeAnimatedRemoveJsSyncCache = cached
     }
     return cached
   }
@@ -249,15 +258,6 @@ internal class ReactNativeFeatureFlagsCxxAccessor : ReactNativeFeatureFlagsAcces
     if (cached == null) {
       cached = ReactNativeFeatureFlagsCxxInterop.enableIOSViewClipToPaddingBox()
       enableIOSViewClipToPaddingBoxCache = cached
-    }
-    return cached
-  }
-
-  override fun enableIntersectionObserverEventLoopIntegration(): Boolean {
-    var cached = enableIntersectionObserverEventLoopIntegrationCache
-    if (cached == null) {
-      cached = ReactNativeFeatureFlagsCxxInterop.enableIntersectionObserverEventLoopIntegration()
-      enableIntersectionObserverEventLoopIntegrationCache = cached
     }
     return cached
   }

@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<898d5acbbe56a09ea10e9423accd69fd>>
+ * @generated SignedSource<<ee714ff865ecd52f3644451aaa1e1d2a>>
  */
 
 /**
@@ -42,6 +42,8 @@ class NativeReactNativeFeatureFlags
 
   bool cxxNativeAnimatedEnabled(jsi::Runtime& runtime);
 
+  bool cxxNativeAnimatedRemoveJsSync(jsi::Runtime& runtime);
+
   bool disableMainQueueSyncDispatchIOS(jsi::Runtime& runtime);
 
   bool disableMountItemReorderingAndroid(jsi::Runtime& runtime);
@@ -75,8 +77,6 @@ class NativeReactNativeFeatureFlags
   bool enableIOSTextBaselineOffsetPerLine(jsi::Runtime& runtime);
 
   bool enableIOSViewClipToPaddingBox(jsi::Runtime& runtime);
-
-  bool enableIntersectionObserverEventLoopIntegration(jsi::Runtime& runtime);
 
   bool enableLayoutAnimationsOnAndroid(jsi::Runtime& runtime);
 

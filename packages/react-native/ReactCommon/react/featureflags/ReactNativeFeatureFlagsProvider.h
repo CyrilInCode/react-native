@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<2418719950b4918f5cc2324ef3ed7daa>>
+ * @generated SignedSource<<404f7457739c9a7fa6c24fd50754836d>>
  */
 
 /**
@@ -28,6 +28,7 @@ class ReactNativeFeatureFlagsProvider {
   virtual bool commonTestFlag() = 0;
   virtual bool animatedShouldSignalBatch() = 0;
   virtual bool cxxNativeAnimatedEnabled() = 0;
+  virtual bool cxxNativeAnimatedRemoveJsSync() = 0;
   virtual bool disableMainQueueSyncDispatchIOS() = 0;
   virtual bool disableMountItemReorderingAndroid() = 0;
   virtual bool disableTextLayoutManagerCacheAndroid() = 0;
@@ -45,7 +46,6 @@ class ReactNativeFeatureFlagsProvider {
   virtual bool enableFontScaleChangesUpdatingLayout() = 0;
   virtual bool enableIOSTextBaselineOffsetPerLine() = 0;
   virtual bool enableIOSViewClipToPaddingBox() = 0;
-  virtual bool enableIntersectionObserverEventLoopIntegration() = 0;
   virtual bool enableLayoutAnimationsOnAndroid() = 0;
   virtual bool enableLayoutAnimationsOnIOS() = 0;
   virtual bool enableMainQueueCoordinatorOnIOS() = 0;

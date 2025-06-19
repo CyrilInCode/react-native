@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<25b3585f3648fe156fab4a5abbf32e60>>
+ * @generated SignedSource<<c80472950cb864b029873b4e64acc976>>
  */
 
 /**
@@ -53,6 +53,11 @@ class ReactNativeFeatureFlags {
    * Use a C++ implementation of Native Animated instead of the platform implementation.
    */
   RN_EXPORT static bool cxxNativeAnimatedEnabled();
+
+  /**
+   * Removes JS sync at end of native animation
+   */
+  RN_EXPORT static bool cxxNativeAnimatedRemoveJsSync();
 
   /**
    * Disable sync dispatch on the main queue on iOS
@@ -138,11 +143,6 @@ class ReactNativeFeatureFlags {
    * iOS Views will clip to their padding box vs border box
    */
   RN_EXPORT static bool enableIOSViewClipToPaddingBox();
-
-  /**
-   * Integrates IntersectionObserver in the Event Loop in the new architecture, to dispatch the initial notifications for observations in the "Update the rendering" step.
-   */
-  RN_EXPORT static bool enableIntersectionObserverEventLoopIntegration();
 
   /**
    * When enabled, LayoutAnimations API will animate state changes on Android.

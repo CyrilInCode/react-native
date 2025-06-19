@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<56704140bc822ee33a8686ad3e132b41>>
+ * @generated SignedSource<<9f462bca84c5fc361a92b288155b491b>>
  */
 
 /**
@@ -57,6 +57,11 @@ bool NativeReactNativeFeatureFlags::animatedShouldSignalBatch(
 bool NativeReactNativeFeatureFlags::cxxNativeAnimatedEnabled(
     jsi::Runtime& /*runtime*/) {
   return ReactNativeFeatureFlags::cxxNativeAnimatedEnabled();
+}
+
+bool NativeReactNativeFeatureFlags::cxxNativeAnimatedRemoveJsSync(
+    jsi::Runtime& /*runtime*/) {
+  return ReactNativeFeatureFlags::cxxNativeAnimatedRemoveJsSync();
 }
 
 bool NativeReactNativeFeatureFlags::disableMainQueueSyncDispatchIOS(
@@ -142,11 +147,6 @@ bool NativeReactNativeFeatureFlags::enableIOSTextBaselineOffsetPerLine(
 bool NativeReactNativeFeatureFlags::enableIOSViewClipToPaddingBox(
     jsi::Runtime& /*runtime*/) {
   return ReactNativeFeatureFlags::enableIOSViewClipToPaddingBox();
-}
-
-bool NativeReactNativeFeatureFlags::enableIntersectionObserverEventLoopIntegration(
-    jsi::Runtime& /*runtime*/) {
-  return ReactNativeFeatureFlags::enableIntersectionObserverEventLoopIntegration();
 }
 
 bool NativeReactNativeFeatureFlags::enableLayoutAnimationsOnAndroid(

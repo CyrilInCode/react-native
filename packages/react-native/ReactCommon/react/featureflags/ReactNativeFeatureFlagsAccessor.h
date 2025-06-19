@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<65d21b40786d625e15440e7aeb70e0ee>>
+ * @generated SignedSource<<8c6910a889ca561af1b8ba3ef761cfde>>
  */
 
 /**
@@ -35,6 +35,7 @@ class ReactNativeFeatureFlagsAccessor {
   bool commonTestFlag();
   bool animatedShouldSignalBatch();
   bool cxxNativeAnimatedEnabled();
+  bool cxxNativeAnimatedRemoveJsSync();
   bool disableMainQueueSyncDispatchIOS();
   bool disableMountItemReorderingAndroid();
   bool disableTextLayoutManagerCacheAndroid();
@@ -52,7 +53,6 @@ class ReactNativeFeatureFlagsAccessor {
   bool enableFontScaleChangesUpdatingLayout();
   bool enableIOSTextBaselineOffsetPerLine();
   bool enableIOSViewClipToPaddingBox();
-  bool enableIntersectionObserverEventLoopIntegration();
   bool enableLayoutAnimationsOnAndroid();
   bool enableLayoutAnimationsOnIOS();
   bool enableMainQueueCoordinatorOnIOS();
@@ -100,6 +100,7 @@ class ReactNativeFeatureFlagsAccessor {
   std::atomic<std::optional<bool>> commonTestFlag_;
   std::atomic<std::optional<bool>> animatedShouldSignalBatch_;
   std::atomic<std::optional<bool>> cxxNativeAnimatedEnabled_;
+  std::atomic<std::optional<bool>> cxxNativeAnimatedRemoveJsSync_;
   std::atomic<std::optional<bool>> disableMainQueueSyncDispatchIOS_;
   std::atomic<std::optional<bool>> disableMountItemReorderingAndroid_;
   std::atomic<std::optional<bool>> disableTextLayoutManagerCacheAndroid_;
@@ -117,7 +118,6 @@ class ReactNativeFeatureFlagsAccessor {
   std::atomic<std::optional<bool>> enableFontScaleChangesUpdatingLayout_;
   std::atomic<std::optional<bool>> enableIOSTextBaselineOffsetPerLine_;
   std::atomic<std::optional<bool>> enableIOSViewClipToPaddingBox_;
-  std::atomic<std::optional<bool>> enableIntersectionObserverEventLoopIntegration_;
   std::atomic<std::optional<bool>> enableLayoutAnimationsOnAndroid_;
   std::atomic<std::optional<bool>> enableLayoutAnimationsOnIOS_;
   std::atomic<std::optional<bool>> enableMainQueueCoordinatorOnIOS_;
